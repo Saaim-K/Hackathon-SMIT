@@ -1,13 +1,12 @@
-import React from 'react'
 import './App.css';
-import Login from './Components/Login';
-import { db } from './firebase-config';
+import Login from './Components/Login/Login'
 
-export default function App() {
-
+function App() {
   return (
     <>
       <Login />
     </>
-  )
+  );
 }
+
+export default App;
