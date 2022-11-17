@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
-import './Login.css'
+import  styles from'./Login.css'
+import Home from '../Home/Home';
 import { auth } from '../../firebase-config'
 import { signInWithEmailAndPassword } from 'firebase/auth';
 
 export default function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [islogin, setIsLogin] = useState(false)
+
   const login = async (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
@@ -13,6 +16,8 @@ export default function Login() {
         // Signed in 
         const user = userCredential.user;
         console.log(user);
+        setIsLogin(!islogin)
+        console.log(islogin);
         // ...
       })
       .catch((error) => {
@@ -33,10 +38,10 @@ export default function Login() {
     //   </form>
     // </>
     <>
-      <form className="form" autoComplete="off" onSubmit={login}>
+      <form className="styles.form" autoComplete="off" onSubmit={login}>
 
         {/* ------------------------- Header ------------------------- */}
-        <div className="control">
+        <div className="styles.control">
           <h1>
             Sign In
           </h1>
@@ -44,47 +49,47 @@ export default function Login() {
         {/* ------------------------- Header ------------------------- */}
 
         {/* ------------------------- Username ------------------------- */}
-        <div className="control block-cube block-input">
+        <div className="styles.control styles.block-cube styles.block-input">
           <input name="username" type="text" placeholder="Username" onChange={(e) => { setEmail(e.target.value) }} />
-          <div className="bg-top">
-            <div className="bg-inner"></div>
+          <div className="styles.bg-top">
+            <div className="styles.bg-inner"></div>
           </div>
-          <div className="bg-right">
-            <div className="bg-inner"></div>
+          <div className="styles.bg-right">
+            <div className="styles.bg-inner"></div>
           </div>
-          <div className="bg">
-            <div className="bg-inner"></div>
+          <div className="styles.bg">
+            <div className="styles.bg-inner"></div>
           </div>
         </div>
         {/* ------------------------- Username ------------------------- */}
 
         {/* ------------------------- Password ------------------------- */}
-        <div className="control block-cube block-input">
+        <div className="styles.control styles.block-cube styles.block-input">
           <input name="password" type="password" placeholder="Password" onChange={(e) => { setPassword(e.target.value) }} />
-          <div className="bg-top">
-            <div className="bg-inner"></div>
+          <div className="styles.bg-top">
+            <div className="styles.bg-inner"></div>
           </div>
-          <div className="bg-right">
-            <div className="bg-inner"></div>
+          <div className="styles.bg-right">
+            <div className="styles.bg-inner"></div>
           </div>
-          <div className="bg">
-            <div className="bg-inner"></div>
+          <div className="styles.bg">
+            <div className="styles.bg-inner"></div>
           </div>
         </div>
         {/* ------------------------- Password ------------------------- */}
 
         {/* ------------------------- Button ------------------------- */}
-        <button className="btn block-cube block-cube-hover" type="submit" >
-          <div className="bg-top">
-            <div className="bg-inner"></div>
+        <button className="styles.btn styles.block-cube styles.block-cube-hover" type="submit" >
+          <div className="styles.bg-top">
+            <div className="styles.bg-inner"></div>
           </div>
-          <div className="bg-right">
-            <div className="bg-inner"></div>
+          <div className="styles.bg-right">
+            <div className="styles.bg-inner"></div>
           </div>
-          <div className="bg">
-            <div className="bg-inner"></div>
+          <div className="styles.bg">
+            <div className="styles.bg-inner"></div>
           </div>
-          <div className="text">
+          <div className="styles.text">
             Log In
           </div>
         </button>
