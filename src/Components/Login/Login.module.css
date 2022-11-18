@@ -45,10 +45,10 @@ h1 {
     font-family: monospace;
     font-size: 16px;
 }
-.block-cube {
+.block_cube {
     position: relative;
 }
-.block-cube .bg-top {
+.block_cube .bg_top {
     position: absolute;
     height: 10px;
     background: #020024;
@@ -59,10 +59,10 @@ h1 {
     transform: skew(-45deg, 0);
     margin: 0;
 }
-.block-cube .bg-top .bg-inner {
+.block_cube .bg_top .bg_inner {
     bottom: 0;
 }
-.block-cube .bg {
+.block_cube .bg {
     position: absolute;
     left: 0;
     top: 0;
@@ -71,7 +71,7 @@ h1 {
     background: #020024;
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(52, 9, 121, 1) 37%, rgba(0, 212, 255, 1) 94%);
 }
-.block-cube .bg-right {
+.block_cube .bg_right {
     position: absolute;
     background: #020024;
     background: rgba(0, 212, 255, 1);
@@ -82,13 +82,13 @@ h1 {
     left: 100%;
     transform: skew(0, -45deg);
 }
-.block-cube .bg-right .bg-inner {
+.block_cube .bg_right .bg_inner {
     left: 0;
 }
-.block-cube .bg .bg-inner {
+.block_cube .bg .bg_inner {
     transition: all 0.2s ease-in-out;
 }
-.block-cube .bg-inner {
+.block_cube .bg_inner {
     background: #212121;
     position: absolute;
     left: 2px;
@@ -96,45 +96,28 @@ h1 {
     right: 2px;
     bottom: 2px;
 }
-.block-cube .text {
+.block_cube .text {
     position: relative;
     z-index: 2;
 }
-.block-cube.block-input input {
+.block_cube.block_input input {
     position: relative;
     z-index: 2;
 }
-.block-cube.block-input input:focus ~ .bg-right .bg-inner, .block-cube.block-input input:focus ~ .bg-top .bg-inner, .block-cube.block-input input:focus ~ .bg-inner .bg-inner {
+.block_cube.block_input input:focus ~ .bg_right .bg_inner, .block_cube.block_input input:focus ~ .bg_top .bg_inner, .block_cube.block_input input:focus ~ .bg_inner .bg_inner {
     top: 100%;
     background: rgba(255, 255, 255, 0.5);
 }
-.block-cube.block-input .bg-top, .block-cube.block-input .bg-right, .block-cube.block-input .bg {
+.block_cube.block_input .bg_top, .block_cube.block_input .bg_right, .block_cube.block_input .bg {
     background: rgba(255, 255, 255, 0.5);
     transition: background 0.2s ease-in-out;
 }
-.block-cube.block-input .bg-right .bg-inner, .block-cube.block-input .bg-top .bg-inner {
+.block_cube.block_input .bg_right .bg_inner, .block_cube.block_input .bg_top .bg_inner {
     transition: all 0.2s ease-in-out;
 }
-.block-cube.block-input:focus .bg-top, .block-cube.block-input:hover .bg-top, .block-cube.block-input:focus .bg-right, .block-cube.block-input:hover .bg-right, .block-cube.block-input:focus .bg, .block-cube.block-input:hover .bg {
+.block_cube.block_input:focus .bg_top, .block_cube.block_input:hover .bg_top, .block_cube.block_input:focus .bg_right, .block_cube.block_input:hover .bg_right, .block_cube.block_input:focus .bg, .block_cube.block_input:hover .bg {
     background: rgba(255, 255, 255, 0.8);
 }
-.block-cube.block-cube-hover:focus .bg .bg-inner, .block-cube.block-cube-hover:hover .bg .bg-inner {
+.block_cube.block_cube-hover:focus .bg .bg_inner, .block_cube.block_cube-hover:hover .bg .bg_inner {
     top: 100%;
-}
-.credits {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    padding: 15px 15px;
-    width: 100%;
-    z-index: 111;
-}
-.credits a {
-    opacity: 0.6;
-    color: #fff;
-    font-size: 11px;
-    text-decoration: none;
-}
-.credits a:hover {
-    opacity: 1;
 }

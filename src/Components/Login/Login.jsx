@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import  styles from'./Login.css'
-import Home from '../Home/Home';
+import styles from './Login.module.css'
+// import Home from '../Home/Home';
 import { auth } from '../../firebase-config'
 import { signInWithEmailAndPassword } from 'firebase/auth';
 
@@ -38,10 +38,10 @@ export default function Login() {
     //   </form>
     // </>
     <>
-      <form className="styles.form" autoComplete="off" onSubmit={login}>
+      <form className={`${styles.form}`} autoComplete="off" onSubmit={login}>
 
         {/* ------------------------- Header ------------------------- */}
-        <div className="styles.control">
+        <div className={`${styles.control}`}>
           <h1>
             Sign In
           </h1>
@@ -49,47 +49,47 @@ export default function Login() {
         {/* ------------------------- Header ------------------------- */}
 
         {/* ------------------------- Username ------------------------- */}
-        <div className="styles.control styles.block-cube styles.block-input">
+        <div className={`${styles.control} ${styles.block_cube} ${styles.block_input}`}>
           <input name="username" type="text" placeholder="Username" onChange={(e) => { setEmail(e.target.value) }} />
-          <div className="styles.bg-top">
-            <div className="styles.bg-inner"></div>
+          <div className={`${styles.bg_top}`}>
+            <div className={`${styles.bg_inner}`}></div>
           </div>
-          <div className="styles.bg-right">
-            <div className="styles.bg-inner"></div>
+          <div className={`${styles.bg_right}`}>
+            <div className={`${styles.bg_inner}`}></div>
           </div>
-          <div className="styles.bg">
-            <div className="styles.bg-inner"></div>
+          <div className={`${styles.bg}`}>
+            <div className={`${styles.bg_inner}`}></div>
           </div>
         </div>
         {/* ------------------------- Username ------------------------- */}
 
         {/* ------------------------- Password ------------------------- */}
-        <div className="styles.control styles.block-cube styles.block-input">
+        <div className={`${styles.control} ${styles.block_cube} ${styles.block_input}`}>
           <input name="password" type="password" placeholder="Password" onChange={(e) => { setPassword(e.target.value) }} />
-          <div className="styles.bg-top">
-            <div className="styles.bg-inner"></div>
+          <div className={`${styles.bg_top}`}>
+            <div className={`${styles.bg_inner}`}></div>
           </div>
-          <div className="styles.bg-right">
-            <div className="styles.bg-inner"></div>
+          <div className={`${styles.bg_right}`}>
+            <div className={`${styles.bg_inner}`}></div>
           </div>
-          <div className="styles.bg">
-            <div className="styles.bg-inner"></div>
+          <div className={`${styles.bg}`}>
+            <div className={`${styles.bg_inner}`}></div>
           </div>
         </div>
         {/* ------------------------- Password ------------------------- */}
 
         {/* ------------------------- Button ------------------------- */}
-        <button className="styles.btn styles.block-cube styles.block-cube-hover" type="submit" >
-          <div className="styles.bg-top">
-            <div className="styles.bg-inner"></div>
+        <button className={`${styles.btn} ${styles.block_cube} ${styles.block_cube_hover}`} type="submit" >
+          <div className={`${styles.bg_top}`}>
+            <div className={`${styles.bg_inner}`}></div>
           </div>
-          <div className="styles.bg-right">
-            <div className="styles.bg-inner"></div>
+          <div className={`${styles.bg_right}`}>
+            <div className={`${styles.bg_inner}`}></div>
           </div>
-          <div className="styles.bg">
-            <div className="styles.bg-inner"></div>
+          <div className={`${styles.bg}`}>
+            <div className={`${styles.bg_inner}`}></div>
           </div>
-          <div className="styles.text">
+          <div className={`${styles.text}`}>
             Log In
           </div>
         </button>
